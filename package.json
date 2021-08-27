@@ -1,0 +1,26 @@
+{
+  "name": "goit-js-hw-10-food-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "homepage": "https://github.com/vladibon/goit-js-hw-10-food-service#readme",
+  "scripts": {
+    "dev": "parcel src/*.html",
+    "build": "parcel build src/*.html --public-url /goit-js-hw-10-food-service/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vladibon/goit-js-hw-10-food-service.git"
+  },
+  "keywords": [],
+  "author": "Vladimir Bondar <vladi.bondar@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vladibon/goit-js-hw-10-food-service/issues"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "parcel-plugin-handlebars-precompile": "^1.0.2",
+    "parcel-plugin-nuke-dist": "^1.0.1"
+  }
+}
