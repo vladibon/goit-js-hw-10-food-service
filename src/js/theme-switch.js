@@ -1,9 +1,13 @@
-import refs from './refs';
 import themes from './themes';
-import setTheme from './set-theme';
 
-refs.themeSwitch.checked = localStorage.getItem('theme') === themes.DARK;
+const { PROP, LIGHT, DARK } = themes;
 
-setTheme(refs.themeSwitch.checked);
+setTheme((themeSwitch.checked = localStorage.getItem(PROP) === DARK));
 
-refs.themeSwitch.addEventListener('change', e => setTheme(e.target.checked));
+themeSwitch.onchange = e => setTheme(e.target.checked);
+
+function setTheme(isThemeSwitchChecked) {
+  document.body.classList.add(isThemeSwitchChecked ? DARK : LIGHT);
+  document.body.classList.remove(isThemeSwitchChecked ? LIGHT : DARK);
+  localStorage.setItem(PROP, isThemeSwitchChecked ? DARK : LIGHT);
+}
